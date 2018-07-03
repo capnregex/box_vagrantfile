@@ -3,8 +3,8 @@
 
 def require_plugin name
   unless Vagrant.has_plugin?(name)
-    puts "installing plugin %{ name }"
-    %x(vagrant plugin install %{ name })
+    puts "installing plugin #{ name }"
+    %x(vagrant plugin install #{ name })
     puts "Installed!"
     puts "retrying: vagrant #{ARGV}"
     exec 'vagrant', *ARGV
